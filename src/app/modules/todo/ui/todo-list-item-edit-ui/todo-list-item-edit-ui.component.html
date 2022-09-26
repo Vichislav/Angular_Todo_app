@@ -1,0 +1,6 @@
+<form action="#" (ngSubmit)="onEdit()">
+  <input type="text" name="name" [(ngModel)]="name">
+  <!--[disabled]="!name" - если name не существует кнопка недоступна-->
+  <button [disabled]="!name">Ok</button>
+  <button type="button" (click)="onCancel()">Cancel</button>
+</form>

@@ -1,0 +1,13 @@
+.ui__wrap {
+  display: flex;
+  flex-direction: row;
+}
+.ui__wrap__checkName {
+  width: 80%;
+}
+.ui__wrap__btn {
+  display: flex;
+}
+.ui__wrap__btn_item-1, .ui__wrap__btn_item-2 {
+  margin: 5px;
+}

@@ -1,0 +1,14 @@
+<div class="wrap">
+  <div class="wrap__content">
+    <h1 class="wrap__content__title">Todo Widget</h1>
+    <div class="wrap__content__item">
+      <app-todo-create-form-ui (create)="onCreate($event)"></app-todo-create-form-ui>
+      <app-todo-list-ui [todoList]="todoList$ | async"
+                        (delete)="onDelete($event)"
+                        (toggle)="onToggle($event)"
+                        (edit)="onEdit($event)"
+      ></app-todo-list-ui>
+    </div>
+  </div>
+</div>
+

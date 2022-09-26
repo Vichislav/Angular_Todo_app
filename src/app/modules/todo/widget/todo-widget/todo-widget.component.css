@@ -1,0 +1,19 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ background-color: #b2b0b0;
+}
+.wrap__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  background-color: #f1eeee;
+}
+.wrap__content__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}

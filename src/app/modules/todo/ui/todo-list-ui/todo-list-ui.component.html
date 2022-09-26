@@ -1,0 +1,18 @@
+<ul>
+  <li *ngFor="let todo of todoList">
+    <!--includes - определяет, содержит ли массив определённый элемент,
+возвращая в зависимости от этого true или false.
+ если id этого элемента !нет в массиве editIds отрисовываем ЭТОТ тег-->
+    <app-todo-list-item-ui *ngIf="!editIds.includes(todo.id)"
+                           [todo]="todo"
+                           (toggle)="onToggle(todo.id)"
+                           (delete)="onDelete(todo.id)"
+                           (edit)="onEditMode(todo.id)"
+    ></app-todo-list-item-ui>
+    <!--если id этого элемента ЕСТЬ в массиве editIds отрисовываем ЭТОТ тег-->
+    <app-todo-list-item-edit-ui *ngIf="editIds.includes(todo.id)"
+                                [todo]="todo"
+                                (edit)="onEdit($event, todo.id)"
+    ></app-todo-list-item-edit-ui>
+  </li>
+</ul>

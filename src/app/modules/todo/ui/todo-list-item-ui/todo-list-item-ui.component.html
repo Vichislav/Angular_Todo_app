@@ -1,0 +1,13 @@
+<div class="ui__wrap">
+  <div class="ui__wrap__checkName">
+    <label>
+      <input type="checkbox" [checked]="todo.completed" (click)="onToggle($event)">
+      <del *ngIf="todo.completed"><span>{{ todo.name }}</span></del>
+      <span *ngIf="!todo.completed">{{ todo.name }}</span>
+    </label>
+  </div>
+ <div class="ui__wrap__btn">
+   <button class="ui__wrap__btn_item-1" (click)="onEdit()">Edit</button>
+   <button class="ui__wrap__btn_item-2" (click)="onDelete()">Delete</button>
+ </div>
+</div>
